@@ -1,9 +1,9 @@
 import * as React from "react";
 import Svg, { G, Path, Defs, ClipPath, SvgProps } from "react-native-svg";
 
-function Icon(props: React.ComponentClass<SvgProps>) {
+function SVG_two() {
     return (
-        <Svg width={247} height={188} fill="none" {...props}>
+        <Svg width={247} height={188} fill="none" >
             <G clipPath="url(#prefix__clip0)">
                 <Path
                     d="M227.553 45.7C199.519 5.727 140.298-10.489 82.057 6.975 51.266 16.208 21.578 34.707 6.865 70.527c-26.3 64.033 28.92 84.483 65.028 91.001 17.46 3.151 33.905 8.445 48.932 15.653 27.035 12.968 74.888 24.459 110.973-29.558 26.155-39.151 14.427-75.296-4.246-101.923z"
@@ -53,4 +53,4 @@ function Icon(props: React.ComponentClass<SvgProps>) {
     );
 }
 
-export default Icon;
+export default SVG_two;
