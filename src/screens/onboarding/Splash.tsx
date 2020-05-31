@@ -68,7 +68,6 @@ const styles = StyleSheet.create({
 	},
 	sliderContainer: {
 		marginTop: 60,
-		// flex: 1
 	},
 	sliderTitle: {
 		textAlign: 'center',
@@ -77,7 +76,6 @@ const styles = StyleSheet.create({
 	buttonContainer: {
 		flexDirection: 'row',
 		justifyContent: 'space-around',
-		// width: '100%',
 		marginBottom: 40,
 		marginRight: 18,
 		marginLeft: 18,
