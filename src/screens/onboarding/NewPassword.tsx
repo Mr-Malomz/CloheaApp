@@ -5,27 +5,23 @@ import InputField from '../../components/InputField';
 import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
 
-const Login = () => {
+const NewPassword = () => {
 	return (
 		<KeyboardAvoidingView style={styles.loginContainer} behavior='padding'>
 			<AntDesign name='arrowleft' size={24} color='black' />
 			<View style={styles.inputsWrapper}>
-				<HeaderText text='welcome back,' />
-				<InputField label='email' autoCapitalize='none' />
+				<HeaderText text='forgot password' />
+				<Text style={styles.signUpText}>
+					Enter and confirm password change
+				</Text>
 				<InputField label='password' autoCapitalize='none' />
+				<InputField label='confirm password' autoCapitalize='none' />
 				<CustomButton
-					text='log in'
+					text='Submit'
 					onPress={() => console.log(123)}
 					customStyleContaner={styles.buttonLogin}
 					customStyleText={styles.buttonTextLogin}
 				/>
-				<Text style={styles.signUpText}>
-					Don't have an account ?{' '}
-					<Text style={styles.signUpAction}>Sign Up</Text>
-				</Text>
-				<Text style={[styles.signUpText, styles.forgotPassword]}>
-					Forgot Password ?
-				</Text>
 			</View>
 		</KeyboardAvoidingView>
 	);
@@ -56,16 +52,9 @@ const styles = StyleSheet.create({
 	},
 	signUpText: {
 		fontSize: 12,
-		textAlign: 'center',
+		textAlign: 'left',
 		marginBottom: 30,
-	},
-	signUpAction: {
-		fontWeight: 'bold',
-		color: '#2671B8',
-	},
-	forgotPassword: {
-		fontWeight: 'bold',
 	},
 });
 
-export default Login;
+export default NewPassword;

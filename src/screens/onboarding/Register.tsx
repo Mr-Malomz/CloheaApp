@@ -13,7 +13,7 @@ import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
 
 const Register = () => {
-    const { height } = Dimensions.get('window');
+	const { height } = Dimensions.get('window');
 	const [state, setState] = useState({ screenHeight: 0 });
 	const scrollEnabled = state.screenHeight > height;
 
@@ -21,7 +21,10 @@ const Register = () => {
 		setState({ screenHeight: contentHeight });
 
 	return (
-		<ScrollView scrollEnabled={scrollEnabled} onContentSizeChange={onContentSizeChange}>
+		<ScrollView
+			scrollEnabled={scrollEnabled}
+			onContentSizeChange={onContentSizeChange}
+		>
 			<KeyboardAvoidingView
 				style={styles.registerContainer}
 				behavior='padding'
@@ -56,8 +59,8 @@ const styles = StyleSheet.create({
 		alignItems: 'flex-start',
 		justifyContent: 'center',
 		width: '100%',
-        paddingHorizontal: 16,
-        paddingTop: 100
+		paddingHorizontal: 16,
+		paddingTop: 100,
 	},
 	inputsWrapper: {
 		width: '100%',
@@ -80,7 +83,7 @@ const styles = StyleSheet.create({
 		marginBottom: 30,
 	},
 	signUpAction: {
-		fontWeight: '500',
+		fontWeight: 'bold',
 		color: '#2671B8',
 	},
 });

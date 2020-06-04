@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 interface InputProps extends TextInputProps {
-	custStye?: any;
+	custStyle?: any;
 	label: string;
 }
 
@@ -18,7 +18,7 @@ const InputField = (props: InputProps) => {
 			<Text style={styles.label}>{props.label}</Text>
 			<TextInput
 				{...props}
-				style={{ ...styles.input, ...props.custStye }}
+				style={{ ...styles.input, ...props.custStyle }}
 			/>
 		</View>
 	);
