@@ -6,6 +6,7 @@ import Register from './src/screens/onboarding/Register';
 import ForgotPassword from './src/screens/onboarding/ForgotPassword';
 import NewPassword from './src/screens/onboarding/NewPassword';
 import Congratulation from './src/screens/onboarding/Congratulation';
+import InputOTP from './src/screens/onboarding/InputOTP';
 
 export default function App() {
 	return (
@@ -16,7 +17,8 @@ export default function App() {
 		// <Register />
 		// <ForgotPassword />
 		// <NewPassword />
-		<Congratulation />
+		// <Congratulation />
+		<InputOTP />
 	);
 }
 
