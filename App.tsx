@@ -7,6 +7,7 @@ import ForgotPassword from './src/screens/onboarding/ForgotPassword';
 import NewPassword from './src/screens/onboarding/NewPassword';
 import Congratulation from './src/screens/onboarding/Congratulation';
 import InputOTP from './src/screens/onboarding/InputOTP';
+import Home from './src/screens/authScreen/Home';
 
 export default function App() {
 	return (
@@ -18,7 +19,8 @@ export default function App() {
 		// <ForgotPassword />
 		// <NewPassword />
 		// <Congratulation />
-		<InputOTP />
+		// <InputOTP />
+		<Home />
 	);
 }
 

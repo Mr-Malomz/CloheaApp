@@ -17,7 +17,9 @@ const CustomButton: FC<ButtonProps> = ({
 	return (
 		<TouchableOpacity onPress={onPress}>
 			<View style={{ ...styles.buttonContainer, ...customStyleContaner }}>
-				<Text style={{...styles.buttonText, ...customStyleText}}>{text}</Text>
+				<Text style={{ ...styles.buttonText, ...customStyleText }}>
+					{text}
+				</Text>
 			</View>
 		</TouchableOpacity>
 	);
@@ -29,7 +31,7 @@ const styles = StyleSheet.create({
 		borderTopRightRadius: 6,
 		borderBottomRightRadius: 6,
 		borderBottomLeftRadius: 0,
-        paddingVertical: 10,
+		paddingVertical: 10,
 	},
 	buttonText: {
 		fontSize: 14,
