@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, FC } from 'react';
 import {
 	View,
 	StyleSheet,
@@ -7,12 +7,20 @@ import {
 	ScrollView,
 	Dimensions,
 } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
 import InputField from '../../components/InputField';
 import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
+import { StackScreenProps } from '@react-navigation/stack';
 
-const Register = () => {
+type RootStackParamList = {
+	Login: undefined;
+	Register: undefined;
+	Home: undefined;
+};
+
+type Props = StackScreenProps<RootStackParamList, 'Register'>;
+
+const Register: FC<Props> = ({ navigation }) => {
 	const { height } = Dimensions.get('window');
 	const [state, setState] = useState({ screenHeight: 0 });
 	const scrollEnabled = state.screenHeight > height;
@@ -29,7 +37,6 @@ const Register = () => {
 				style={styles.registerContainer}
 				behavior='padding'
 			>
-				<AntDesign name='arrowleft' size={24} color='black' />
 				<View style={styles.inputsWrapper}>
 					<HeaderText text='create account' />
 					<InputField label='firstname' autoCapitalize='none' />
@@ -39,13 +46,18 @@ const Register = () => {
 					<InputField label='password' autoCapitalize='none' />
 					<CustomButton
 						text='register'
-						onPress={() => console.log(123)}
+						onPress={() => navigation.navigate('Home')}
 						customStyleContaner={styles.buttonRegister}
 						customStyleText={styles.buttonTextRegister}
 					/>
 					<Text style={styles.signUpText}>
 						Already have an account ?{' '}
-						<Text style={styles.signUpAction}>Login</Text>
+						<Text
+							style={styles.signUpAction}
+							onPress={() => navigation.navigate('Login')}
+						>
+							Login
+						</Text>
 					</Text>
 				</View>
 			</KeyboardAvoidingView>
@@ -60,7 +72,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center',
 		width: '100%',
 		paddingHorizontal: 16,
-		paddingTop: 100,
+		paddingTop: 50,
 	},
 	inputsWrapper: {
 		width: '100%',

@@ -95,7 +95,6 @@ const styles = StyleSheet.create({
 	imageStyle: {
 		borderWidth: 3,
 		borderColor: '#2671B8',
-		borderStyle: 'solid',
 		height: 38,
 		width: 38,
 		borderRadius: 50,

@@ -1,29 +1,45 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, StyleSheet, KeyboardAvoidingView, Text } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
 import InputField from '../../components/InputField';
 import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
+import { StackScreenProps } from '@react-navigation/stack';
 
-const Login = () => {
+type RootStackParamList = {
+	Login: undefined;
+	ForgotPassword: undefined;
+	Register: undefined;
+	Home: undefined
+};
+
+type Props = StackScreenProps<RootStackParamList, 'Login'>;
+
+const Login: FC<Props> = ({ navigation }) => {
 	return (
 		<KeyboardAvoidingView style={styles.loginContainer} behavior='padding'>
-			<AntDesign name='arrowleft' size={24} color='black' />
 			<View style={styles.inputsWrapper}>
 				<HeaderText text='welcome back,' />
 				<InputField label='email' autoCapitalize='none' />
 				<InputField label='password' autoCapitalize='none' />
 				<CustomButton
 					text='log in'
-					onPress={() => console.log(123)}
+					onPress={() => navigation.navigate('Home')}
 					customStyleContaner={styles.buttonLogin}
 					customStyleText={styles.buttonTextLogin}
 				/>
 				<Text style={styles.signUpText}>
 					Don't have an account ?{' '}
-					<Text style={styles.signUpAction}>Sign Up</Text>
+					<Text
+						style={styles.signUpAction}
+						onPress={() => navigation.navigate('Register')}
+					>
+						Sign Up
+					</Text>
 				</Text>
-				<Text style={[styles.signUpText, styles.forgotPassword]}>
+				<Text
+					style={[styles.signUpText, styles.forgotPassword]}
+					onPress={() => navigation.navigate('ForgotPassword')}
+				>
 					Forgot Password ?
 				</Text>
 			</View>

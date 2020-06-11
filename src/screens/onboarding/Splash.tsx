@@ -5,8 +5,17 @@ import SVG_two from '../../utils/svgs/SVG_two';
 import CustomButton from '../../components/CustomButton';
 import Swiper from 'react-native-web-swiper';
 import { calcDivisionDimension } from '../../constants/calcDimension';
+import { StackScreenProps } from '@react-navigation/stack';
 
-const Splash: FC = () => {
+type RootStackParamList = {
+	Splash: undefined;
+	Login: undefined;
+	Register: undefined;
+};
+
+type Props = StackScreenProps<RootStackParamList, 'Splash'>;
+
+const Splash: FC<Props> = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<Image source={require('../../utils/images/cloheaLogo.jpg')} />
@@ -37,13 +46,13 @@ const Splash: FC = () => {
 			<View style={styles.buttonContainer}>
 				<CustomButton
 					text='login'
-					onPress={() => console.log(123)}
+					onPress={() => navigation.navigate('Login')}
 					customStyleContaner={styles.buttonLogin}
 					customStyleText={styles.buttonTextLogin}
 				/>
 				<CustomButton
 					text='Register'
-					onPress={() => console.log(123)}
+					onPress={() => navigation.navigate('Register')}
 					customStyleContaner={styles.buttonRegister}
 					customStyleText={styles.buttonTextRegister}
 				/>

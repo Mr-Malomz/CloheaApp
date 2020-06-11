@@ -8,19 +8,50 @@ import NewPassword from './src/screens/onboarding/NewPassword';
 import Congratulation from './src/screens/onboarding/Congratulation';
 import InputOTP from './src/screens/onboarding/InputOTP';
 import Home from './src/screens/authScreen/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+type RootStackParamList = {
+	Home: undefined;
+	Splash: undefined;
+	Login: undefined;
+	Register: undefined;
+	ForgotPassword: undefined;
+	Congratulation: undefined;
+	NewPassword: undefined;
+	InputOTP: undefined;
+};
+
+const Stack = createStackNavigator<RootStackParamList>();
 
 export default function App() {
 	return (
-		// <View style={styles.container}>
-		// </View>
-		// <Splash />
-		// <Login />
-		// <Register />
-		// <ForgotPassword />
-		// <NewPassword />
-		// <Congratulation />
-		// <InputOTP />
-		<Home />
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen
+					name='Splash'
+					component={Splash}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen name='Login' component={Login} />
+				<Stack.Screen name='Register' component={Register} />
+				<Stack.Screen
+					name='ForgotPassword'
+					component={ForgotPassword}
+				/>
+				<Stack.Screen name='NewPassword' component={NewPassword} />
+				<Stack.Screen
+					name='Congratulation'
+					component={Congratulation}
+				/>
+				<Stack.Screen name='InputOTP' component={InputOTP} />
+				<Stack.Screen
+					name='Home'
+					component={Home}
+					options={{ headerShown: false }}
+				/>
+			</Stack.Navigator>
+		</NavigationContainer>
 	);
 }
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import { View, StyleSheet, KeyboardAvoidingView, Text } from 'react-native';
-import { AntDesign } from '@expo/vector-icons';
 import InputField from '../../components/InputField';
 import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
@@ -8,7 +7,6 @@ import CustomButton from '../../components/CustomButton';
 const ForgotPassword = () => {
 	return (
 		<KeyboardAvoidingView style={styles.loginContainer} behavior='padding'>
-			<AntDesign name='arrowleft' size={24} color='black' />
 			<View style={styles.inputsWrapper}>
 				<HeaderText text='forgot password' />
 				<Text style={styles.signUpText}>
