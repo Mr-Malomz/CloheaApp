@@ -4,7 +4,10 @@ import InputField from '../../components/InputField';
 import HeaderText from '../../components/HeaderText';
 import CustomButton from '../../components/CustomButton';
 import { StackScreenProps } from '@react-navigation/stack';
+import { useNavigation } from '@react-navigation/native';
 
+
+//Typescript support for raect-navigation
 type RootStackParamList = {
 	Login: undefined;
 	ForgotPassword: undefined;
@@ -14,7 +17,11 @@ type RootStackParamList = {
 
 type Props = StackScreenProps<RootStackParamList, 'Login'>;
 
-const Login: FC<Props> = ({ navigation }) => {
+
+
+const Login = () => {
+	//use of hooks
+	const navigation = useNavigation();
 	return (
 		<KeyboardAvoidingView style={styles.loginContainer} behavior='padding'>
 			<View style={styles.inputsWrapper}>

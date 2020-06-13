@@ -10,6 +10,7 @@ import InputOTP from './src/screens/onboarding/InputOTP';
 import Home from './src/screens/authScreen/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import HomePage from './src/screens/authScreen/HomePage';
 
 type RootStackParamList = {
 	Home: undefined;
@@ -47,7 +48,7 @@ export default function App() {
 				<Stack.Screen name='InputOTP' component={InputOTP} />
 				<Stack.Screen
 					name='Home'
-					component={Home}
+					component={HomePage}
 					options={{ headerShown: false }}
 				/>
 			</Stack.Navigator>

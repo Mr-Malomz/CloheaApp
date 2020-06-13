@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import { View, StyleSheet, Text, Image, ScrollView } from 'react-native';
 import {
 	MaterialCommunityIcons,
@@ -12,7 +12,11 @@ import MenuCardWithIcon from '../../components/MenuCardWithIcon';
 import HeartSVG from '../../utils/svgs/HeartSVG';
 import DoctorSVG from '../../utils/svgs/DoctorSVG';
 
-const Home = () => {
+interface Props {
+	navigation: any
+}
+
+const Home: FC<Props> = ({navigation}) => {
 	return (
 		<ScrollView>
 			<View style={styles.loginContainer}>
@@ -21,6 +25,7 @@ const Home = () => {
 						name='segment'
 						size={24}
 						color='black'
+						onPress={() => navigation.openDrawer()}
 					/>
 					<Image
 						source={require('../../utils/images/download.jpg')}
