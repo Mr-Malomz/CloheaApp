@@ -5,18 +5,21 @@ import {
 	Entypo,
 	Fontisto,
 	MaterialIcons,
-	Zocial
+	Zocial,
 } from '@expo/vector-icons';
 import MenuCardWithText from '../../components/MenuCardWithText';
 import MenuCardWithIcon from '../../components/MenuCardWithIcon';
 import HeartSVG from '../../utils/svgs/HeartSVG';
 import DoctorSVG from '../../utils/svgs/DoctorSVG';
+import { useNavigation } from '@react-navigation/native';
 
 interface Props {
-	navigation: any
+	navigation: any;
 }
 
-const Home: FC<Props> = ({navigation}) => {
+const Home: FC<Props> = ({ navigation }) => {
+	//use of hooks
+	const stackNavigate = useNavigation();
 	return (
 		<ScrollView>
 			<View style={styles.loginContainer}>
@@ -36,7 +39,7 @@ const Home: FC<Props> = ({navigation}) => {
 				<MenuCardWithText
 					rightText='Appointment'
 					isSmallIcon={false}
-					onPress={() => console.log(123)}
+					onPress={() => stackNavigate.navigate('AppointmentHome')}
 					custStyles={styles.appointment}
 					Icon={Entypo}
 					IconName='calendar'
@@ -73,7 +76,7 @@ const Home: FC<Props> = ({navigation}) => {
 					rightText='Emergency'
 					isSmallIcon={true}
 					onPress={() => console.log(123)}
-					custStyles={styles.emergency }
+					custStyles={styles.emergency}
 					Icon={Entypo}
 					IconName='squared-plus'
 					SmallIcon={Zocial}
@@ -120,11 +123,11 @@ const styles = StyleSheet.create({
 		backgroundColor: '#27127B',
 	},
 	financial: {
-		backgroundColor: '#096A77'
+		backgroundColor: '#096A77',
 	},
 	emergency: {
-		backgroundColor: '#771709'
-	}
+		backgroundColor: '#771709',
+	},
 });
 
 export default Home;
