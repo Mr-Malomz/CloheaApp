@@ -25,7 +25,7 @@ const AppointmentHome = () => {
 					</TouchableOpacity>
 					<CustomButton
 						text='schedule an appointment'
-						onPress={() => console.log(123)}
+						onPress={() => navigation.navigate('NewAppointment')}
 						customStyleContaner={styles.buttonLogin}
 						customStyleText={styles.buttonTextLogin}
 					/>
