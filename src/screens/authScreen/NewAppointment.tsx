@@ -20,7 +20,7 @@ const NewAppointment = () => {
 
 	const handleDateChange = (e: any, selectedDate: Date | undefined) => {
 		const currentDate = selectedDate || state.date;
-		setState({ ...state, date: currentDate });
+		setState({ ...state, date: currentDate, show: Platform.OS === 'ios' });
 		console.log(currentDate);
 	};
 

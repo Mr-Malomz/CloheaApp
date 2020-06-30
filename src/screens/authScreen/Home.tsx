@@ -50,7 +50,7 @@ const Home: FC<Props> = ({ navigation }) => {
 					rightText='Medical History'
 					Icon={Fontisto}
 					IconName='history'
-					onPress={() => console.log(123)}
+					onPress={() => stackNavigate.navigate('MedicalHome')}
 					custStyles={styles.medical}
 					Svg={HeartSVG}
 				/>

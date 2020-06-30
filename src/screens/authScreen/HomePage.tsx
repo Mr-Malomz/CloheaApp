@@ -6,11 +6,15 @@ import DrawerContent from './DrawerContent';
 import AppointmentHome from './AppointmentHome';
 import { createStackNavigator } from '@react-navigation/stack';
 import NewAppointment from './NewAppointment';
+import MedicalHome from './MedicalHome';
+import MedicalDetails from './MedicalDetails';
 
 type RootDrawerParamList = {
 	Home: undefined;
 	AppointmentHome: undefined;
-	NewAppointment: undefined
+	NewAppointment: undefined;
+	MedicalHome: undefined
+	MedicalDetails: undefined
 };
 
 type RootStackParamList = {
@@ -36,6 +40,16 @@ const HomePage = () => {
 					name='NewAppointment'
 					options={{ gestureEnabled: false }}
 					component={NewAppointment}
+				/>
+				<Drawer.Screen
+					name='MedicalHome'
+					options={{ gestureEnabled: false }}
+					component={MedicalHome}
+				/>
+				<Drawer.Screen
+					name='MedicalDetails'
+					options={{ gestureEnabled: false }}
+					component={MedicalDetails}
 				/>
 			</Drawer.Navigator>
 		</NavigationContainer>
