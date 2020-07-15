@@ -8,13 +8,15 @@ import { createStackNavigator } from '@react-navigation/stack';
 import NewAppointment from './NewAppointment';
 import MedicalHome from './MedicalHome';
 import MedicalDetails from './MedicalDetails';
+import FinancialHome from './FinancialHome';
 
 type RootDrawerParamList = {
 	Home: undefined;
 	AppointmentHome: undefined;
 	NewAppointment: undefined;
-	MedicalHome: undefined
-	MedicalDetails: undefined
+	MedicalHome: undefined;
+	MedicalDetails: undefined;
+	FinancialHome: undefined
 };
 
 type RootStackParamList = {
@@ -50,6 +52,11 @@ const HomePage = () => {
 					name='MedicalDetails'
 					options={{ gestureEnabled: false }}
 					component={MedicalDetails}
+				/>
+				<Drawer.Screen
+					name='FinancialHome'
+					options={{ gestureEnabled: false }}
+					component={FinancialHome}
 				/>
 			</Drawer.Navigator>
 		</NavigationContainer>

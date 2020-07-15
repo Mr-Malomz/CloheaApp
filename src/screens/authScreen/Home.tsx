@@ -65,7 +65,7 @@ const Home: FC<Props> = ({ navigation }) => {
 				<MenuCardWithText
 					rightText='Financial History'
 					isSmallIcon={false}
-					onPress={() => console.log(123)}
+					onPress={() => stackNavigate.navigate('FinancialHome')}
 					custStyles={styles.financial}
 					Icon={MaterialCommunityIcons}
 					IconName='finance'
