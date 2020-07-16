@@ -16,15 +16,11 @@ type RootDrawerParamList = {
 	NewAppointment: undefined;
 	MedicalHome: undefined;
 	MedicalDetails: undefined;
-	FinancialHome: undefined
+	FinancialHome: undefined;
 };
 
-type RootStackParamList = {
-	AppointmentHome: undefined;
-};
 
 const Drawer = createDrawerNavigator<RootDrawerParamList>();
-const Stack = createStackNavigator<RootStackParamList>();
 
 const HomePage = () => {
 	return (

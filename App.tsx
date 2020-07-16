@@ -11,6 +11,7 @@ import Home from './src/screens/authScreen/Home';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from './src/screens/authScreen/HomePage';
+import EmergencyContact from './src/screens/authScreen/EmergencyContact';
 
 type RootStackParamList = {
 	Home: undefined;
@@ -21,6 +22,7 @@ type RootStackParamList = {
 	Congratulation: undefined;
 	NewPassword: undefined;
 	InputOTP: undefined;
+	EmergencyContact: undefined;
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -49,6 +51,11 @@ export default function App() {
 				<Stack.Screen
 					name='Home'
 					component={HomePage}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name='EmergencyContact'
+					component={EmergencyContact}
 					options={{ headerShown: false }}
 				/>
 			</Stack.Navigator>

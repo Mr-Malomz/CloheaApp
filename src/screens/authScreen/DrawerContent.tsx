@@ -15,12 +15,14 @@ import {
 	Feather,
 	Ionicons
 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 interface Props {
 	prop: DrawerContentComponentProps<DrawerContentOptions>;
 }
 
 const DrawerContent: FC<Props> = ({ prop }) => {
+	const navigation = useNavigation();
 	return (
 		<View style={styles.container}>
 			{/* <DrawerContentScrollView {...prop}> */}
@@ -38,7 +40,7 @@ const DrawerContent: FC<Props> = ({ prop }) => {
 			<ButtonMenuCust
 				text='emgy. contact'
 				isBorder={true}
-				onPress={() => console.log(124)}
+				onPress={() => navigation.navigate('EmergencyContact')}
 				Icon={Entypo}
 				IconName='squared-plus'
 				IconColor='#2671B8'
