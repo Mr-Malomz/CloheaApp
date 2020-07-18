@@ -1,7 +1,5 @@
 import React, { FC } from 'react';
 import {
-	DrawerContentScrollView,
-	DrawerItem,
 	DrawerContentComponentProps,
 	DrawerContentOptions,
 } from '@react-navigation/drawer';
@@ -13,7 +11,7 @@ import {
 	MaterialCommunityIcons,
 	Entypo,
 	Feather,
-	Ionicons
+	Ionicons,
 } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -68,7 +66,6 @@ const DrawerContent: FC<Props> = ({ prop }) => {
 				Icon={MaterialCommunityIcons}
 				IconName='power'
 				IconColor='#C0C0C0'
-				
 			/>
 			{/* </DrawerContentScrollView> */}
 		</View>

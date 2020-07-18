@@ -4,7 +4,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './Home';
 import DrawerContent from './DrawerContent';
 import AppointmentHome from './AppointmentHome';
-import { createStackNavigator } from '@react-navigation/stack';
 import NewAppointment from './NewAppointment';
 import MedicalHome from './MedicalHome';
 import MedicalDetails from './MedicalDetails';
