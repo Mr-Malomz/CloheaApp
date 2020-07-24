@@ -31,7 +31,7 @@ const DrawerContent: FC<Props> = ({ prop }) => {
 			<Text style={styles.mainText}>Ogunlana Tope</Text>
 			<CustomButton
 				text='edit profile'
-				onPress={() => console.log(124)}
+				onPress={() => navigation.navigate('EditProfile')}
 				customStyleContaner={styles.buttonLogin}
 				customStyleText={styles.buttonTextLogin}
 			/>
@@ -46,7 +46,7 @@ const DrawerContent: FC<Props> = ({ prop }) => {
 			<ButtonMenuCust
 				text='about clohea'
 				isBorder={true}
-				onPress={() => console.log(124)}
+				onPress={() => navigation.navigate('AboutUs')}
 				Icon={Feather}
 				IconName='info'
 				IconColor='#2671B8'
@@ -54,7 +54,7 @@ const DrawerContent: FC<Props> = ({ prop }) => {
 			<ButtonMenuCust
 				text='contact us'
 				isBorder={true}
-				onPress={() => console.log(124)}
+				onPress={() => navigation.navigate('ContactUs')}
 				Icon={Ionicons}
 				IconName='md-chatboxes'
 				IconColor='#2671B8'

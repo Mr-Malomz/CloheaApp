@@ -12,6 +12,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomePage from './src/screens/authScreen/HomePage';
 import EmergencyContact from './src/screens/authScreen/EmergencyContact';
+import AboutUs from './src/screens/authScreen/AboutUs';
+import EditProfile from './src/screens/authScreen/EditProfile';
+import ContactUs from './src/screens/authScreen/ContactUs';
 
 type RootStackParamList = {
 	Home: undefined;
@@ -23,6 +26,9 @@ type RootStackParamList = {
 	NewPassword: undefined;
 	InputOTP: undefined;
 	EmergencyContact: undefined;
+	AboutUs: undefined;
+	EditProfile: undefined;
+	ContactUs: undefined
 };
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -56,6 +62,21 @@ export default function App() {
 				<Stack.Screen
 					name='EmergencyContact'
 					component={EmergencyContact}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name='AboutUs'
+					component={AboutUs}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name='EditProfile'
+					component={EditProfile}
+					options={{ headerShown: false }}
+				/>
+				<Stack.Screen
+					name='ContactUs'
+					component={ContactUs}
 					options={{ headerShown: false }}
 				/>
 			</Stack.Navigator>
