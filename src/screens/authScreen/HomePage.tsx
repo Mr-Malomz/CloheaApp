@@ -8,6 +8,7 @@ import NewAppointment from './NewAppointment';
 import MedicalHome from './MedicalHome';
 import MedicalDetails from './MedicalDetails';
 import FinancialHome from './FinancialHome';
+import FindDoctor from './FindDoctor';
 
 type RootDrawerParamList = {
 	Home: undefined;
@@ -16,6 +17,7 @@ type RootDrawerParamList = {
 	MedicalHome: undefined;
 	MedicalDetails: undefined;
 	FinancialHome: undefined;
+	FindDoctor: undefined
 };
 
 
@@ -52,6 +54,11 @@ const HomePage = () => {
 					name='FinancialHome'
 					options={{ gestureEnabled: false }}
 					component={FinancialHome}
+				/>
+				<Drawer.Screen
+					name='FindDoctor'
+					options={{ gestureEnabled: false }}
+					component={FindDoctor}
 				/>
 			</Drawer.Navigator>
 		</NavigationContainer>

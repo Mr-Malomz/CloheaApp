@@ -58,7 +58,7 @@ const Home: FC<Props> = ({ navigation }) => {
 					rightText='Find a Doctor'
 					Icon={MaterialIcons}
 					IconName='person-add'
-					onPress={() => console.log(123)}
+					onPress={() => stackNavigate.navigate('FindDoctor')}
 					custStyles={styles.doctor}
 					Svg={DoctorSVG}
 				/>
